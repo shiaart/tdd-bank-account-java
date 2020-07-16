@@ -10,8 +10,13 @@ public class Account {
         return balance;
     }
 
-    public int deposit(int ammount){
-        balance +=ammount;
+    public int deposit(int amount){
+        balance +=amount;
+        return balance;
+    }
+
+    public int withdraw(int amount) {
+        balance -=amount;
         return balance;
     }
 }
