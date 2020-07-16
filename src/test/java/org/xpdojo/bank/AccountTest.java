@@ -47,4 +47,12 @@ public class AccountTest {
         });
     }
 
+    @Test
+    public void depositInvalidAmount() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            Account account = new Account();
+            account.deposit(-10);
+        });
+    }
+
 }
