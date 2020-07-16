@@ -11,7 +11,7 @@ public class Account {
         return balance;
     }
 
-    public int deposit(int amount) throws Exception {
+    public int deposit(int amount) throws IllegalArgumentException {
         if(amount < 0){
             throw new IllegalArgumentException();
         }
@@ -19,7 +19,7 @@ public class Account {
         return balance;
     }
 
-    public int withdraw(int amount) throws Exception {
+    public int withdraw(int amount) throws IllegalArgumentException {
         if( balance < amount){
             throw new IllegalArgumentException();
         }
