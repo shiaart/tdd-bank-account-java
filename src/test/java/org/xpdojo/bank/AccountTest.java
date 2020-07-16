@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountTest {
 
     @Test
-    public void depositAnAmountToIncreaseTheBalance() {
+    public void depositAnAmountToIncreaseTheBalance() throws Exception {
          Account account = new Account();
          account.deposit(10);
          assertThat(account.balance()).isEqualTo(10);
@@ -18,7 +18,15 @@ public class AccountTest {
     }
 
     @Test
-    public void withdrawAnAmountToDecreaseTheBalance() {
+    public void depositIntMax() throws Exception {
+        Account account = new Account();
+        account.deposit(Integer.MAX_VALUE);
+        assertThat(account.balance()).isEqualTo(Integer.MAX_VALUE );
+
+    }
+
+    @Test
+    public void withdrawAnAmountToDecreaseTheBalance() throws Exception {
         Account account = new Account();
         account.withdraw(10);
         assertThat(account.balance()).isEqualTo(-10);
