@@ -1,5 +1,6 @@
 package org.xpdojo.bank;
 
+
 public class Account {
     private int balance;
 
@@ -12,7 +13,7 @@ public class Account {
 
     public int deposit(int amount) throws Exception {
         if(amount < 0){
-            throw new Exception("Invalid amount");
+            throw new IllegalArgumentException();
         }
         balance +=amount;
         return balance;
@@ -20,7 +21,7 @@ public class Account {
 
     public int withdraw(int amount) throws Exception {
         if( balance < amount){
-            throw new Exception("Invalid amount");
+            throw new IllegalArgumentException();
         }
         balance -=amount;
         return balance;
