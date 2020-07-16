@@ -27,4 +27,10 @@ public class AccountTest {
         assertThat(account.balance()).isEqualTo(0);
     }
 
+    @Test
+    public void checkZeroBalance() {
+        Account account = new Account();
+        assertThat(account.balance()).isEqualTo(0);
+    }
+
 }
